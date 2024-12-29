@@ -1,4 +1,3 @@
-#define UNIQUE_PTR_IMPL
 #include "UniquePtr.h"
 
 #include <utility>

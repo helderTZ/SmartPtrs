@@ -47,16 +47,9 @@ public:
 };
 
 template <typename T, typename ...Args>
-UniquePtr<T> make_unique(Args... args);
-
-#endif  // UNIQUE_PTR_H
-
-#ifdef UNIQUE_PTR_IMPL
-
-template <typename T, typename ...Args>
 UniquePtr<T> make_unique(Args... args) {
     UniquePtr<T> sptr(new T(std::forward<Args>(args)...));
     return sptr;
 }
 
-#endif  // UNIQUE_PTR_IMPL
+#endif  // UNIQUE_PTR_H

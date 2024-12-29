@@ -76,13 +76,6 @@ public:
 };
 
 template <typename T, typename ...Args>
-SharedPtr<T> make_shared(Args... args);
-
-#endif  // SHARED_PTR_H
-
-#ifdef SHARED_PTR_IMPL
-
-template <typename T, typename ...Args>
 SharedPtr<T> make_shared(Args... args) {
     char* chunk = new char[sizeof(SharedPtrMetadata) + sizeof(T)];
 
@@ -94,4 +87,4 @@ SharedPtr<T> make_shared(Args... args) {
     return sptr;
 }
 
-#endif  // SHARED_PTR_IMPL
+#endif  // SHARED_PTR_H

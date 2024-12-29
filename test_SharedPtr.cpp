@@ -1,4 +1,3 @@
-#define SHARED_PTR_IMPL
 #include "SharedPtr.h"
 
 #include <cassert>
